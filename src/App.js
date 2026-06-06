@@ -42,6 +42,8 @@ function App() {
 
   const escapeCount = useRef(0);
   const messageTimer = useRef(null);
+  const audioRef = useRef(null);
+  const START_AT = 53; // ← start point in seconds (45 = 0:45). Change this.
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -65,6 +67,23 @@ function App() {
     setParticles(ps);
   }, []);
 
+  useEffect(() => {
+    if (!accepted) return;
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    const start = () => {
+      try {
+        audio.currentTime = START_AT;
+      } catch (e) {}
+      audio.play().catch(() => {});
+    };
+
+    // wait for the file's metadata so the seek actually sticks
+    if (audio.readyState >= 1) start();
+    else audio.addEventListener("loadedmetadata", start, { once: true });
+  }, [accepted]);
+
   // The No button now positions itself with `position: fixed`, so it lives in
   // viewport coordinates. We measure the viewport (not a 600px card) so the
   // button can never fly off-screen, and we keep it out of the bottom strip
@@ -86,7 +105,9 @@ function App() {
     const curX = noPos.x ?? vw * 0.55;
     const curY = noPos.y ?? vh * 0.5;
 
-    let newX, newY, tries = 0;
+    let newX,
+      newY,
+      tries = 0;
     do {
       newX = minX + Math.random() * Math.max(1, maxX - minX);
       newY = minY + Math.random() * Math.max(1, maxY - minY);
@@ -152,7 +173,12 @@ function App() {
             <br />
             <span className="accepted-small">that took guts. i see you.</span>
           </p>
-          <div className="accepted-stamp">note: this was built in 10 mins by claude pro, it took me another 10 mins to fix the javascript and another 5 mins to host. just so yk, it was vvv low effort (yes im a nerd)</div>
+          <div className="accepted-stamp">
+            note: this was built in 10 mins by claude pro, it took me another 10
+            mins to fix the javascript and another 5 mins to host. just so yk,
+            it was vvv low effort (yes im a nerd)
+          </div>
+          <audio ref={audioRef} src="/song.mp3" preload="auto" />
         </div>
       </div>
     );
@@ -184,7 +210,9 @@ function App() {
           className={`question ${glitchActive ? "glitch" : ""}`}
           data-text="friends again?"
         >
-          friends<br />again?
+          friends
+          <br />
+          again?
         </h1>
 
         <p className="subtext">
@@ -192,7 +220,9 @@ function App() {
           <br />
           but here we are.
           <br />
-          <span className="subtext-em">for real this time. lets start w a fresh slate?</span>
+          <span className="subtext-em">
+            for real this time. lets start w a fresh slate?
+          </span>
         </p>
 
         <div className="buttons-area">
