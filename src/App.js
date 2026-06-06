@@ -189,7 +189,7 @@ function App() {
           <br />
           but here we are.
           <br />
-          <span className="subtext-em">friends, for real this time. can you give me one last chance? a gamble i promise you'd never regret :)</span>
+          <span className="subtext-em">for real this time.</span>
         </p>
 
         <div className="buttons-area">
