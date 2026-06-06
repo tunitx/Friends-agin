@@ -149,7 +149,7 @@ function App() {
             <br />
             <span className="accepted-small">that took guts. i see you.</span>
           </p>
-          <div className="accepted-stamp">note: this was built in 10 mins by claude pro, it took me another 1 hour to fix javascript, just so yk, ik didnt overdo or overkill anything</div>
+          <div className="accepted-stamp">note: this was built in 10 mins by claude pro, it took me another 10 mins to fix the javascript and another 5 mins to host. just so yk, it was vvv low effort (yes im a nerd)</div>
         </div>
       </div>
     );
@@ -189,7 +189,7 @@ function App() {
           <br />
           but here we are.
           <br />
-          <span className="subtext-em">for real this time.</span>
+          <span className="subtext-em">for real this time. lets start w a fresh slate?</span>
         </p>
 
         <div className="buttons-area">
