@@ -2,20 +2,20 @@ import React, { useState, useRef, useEffect } from "react";
 import "./App.css";
 
 const SAD_MESSAGES = [
-  "nope. try again aug.",
-  "your cursor is lying to you.",
+  "nope. try that again aug.",
+  "tumko coffee ki kasam- (eyeroll)",
+  "bold of you to assume that would work.",
   "that button has trust issues too, apparently.",
-  "bold of you to think that'd work.",
+  "bold of you to think that'd work too hah.",
   "the no button is also going through something rn.",
   "even the button doesn't want to say no.",
-  "error 404: rejection not found.",
   "lol nice try tho.",
   "the universe said absolutely not.",
   "that's not how this works. that's not how any of this works.",
-  "ok but have you considered... yes?",
-  "your mouse needs to reconsider its life choices.",
+  "ok but have you considered at all...?",
+  "haw.",
   "the no button is on a walk. it'll be back never.",
-  "ma'am this is a friendship acceptance form.",
+  "JUST PRESS YES ATP dummy",
 ];
 
 const PARTICLES = ["✦", "◈", "◇", "✧", "⬡", "△", "○"];
