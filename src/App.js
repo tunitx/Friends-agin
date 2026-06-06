@@ -15,7 +15,7 @@ const SAD_MESSAGES = [
   "ok but have you considered... yes?",
   "your mouse needs to reconsider its life choices.",
   "the no button is on a walk. it'll be back never.",
-  "sir/ma'am this is a friendship acceptance form.",
+  "ma'am this is a friendship acceptance form.",
 ];
 
 const PARTICLES = ["✦", "◈", "◇", "✧", "⬡", "△", "○"];
@@ -149,7 +149,7 @@ function App() {
             <br />
             <span className="accepted-small">that took guts. i see you.</span>
           </p>
-          <div className="accepted-stamp">OFFICIAL ✦ CERTIFIED ✦ REAL</div>
+          <div className="accepted-stamp">note: this was built in 10 mins by claude pro, it took me another 1 hour to fix javascript, just so yk, ik didnt overdo or overkill anything</div>
         </div>
       </div>
     );
