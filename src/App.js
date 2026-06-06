@@ -4,8 +4,11 @@ import "./App.css";
 const SAD_MESSAGES = [
   "nope. try that again aug.",
   "tumko coffee ki kasam- (eyeroll)",
+  "harry styles ki kasam ok.",
+  "taylor swift.",
+  "#jai aurat #jai aug",
   "bold of you to assume that would work.",
-  "that button has trust issues too, apparently.",
+  "that button also has trust issues like you, apparently",
   "bold of you to think that'd work too hah.",
   "the no button is also going through something rn.",
   "even the button doesn't want to say no.",
