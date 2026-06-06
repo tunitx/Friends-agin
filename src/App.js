@@ -175,7 +175,7 @@ function App() {
           </p>
           <div className="accepted-stamp">
             note: this was built in 10 mins by claude pro, it took me another 10
-            mins to fix the javascript and another 5 mins to host. just so yk,
+            mins to fix the javascript and another 5 mins to host. just so you don't overthink,
             it was vvv low effort (yes im a nerd)
           </div>
           <audio ref={audioRef} src="/song.mp3" preload="auto" />
